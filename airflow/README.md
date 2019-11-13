@@ -29,7 +29,7 @@ The error was due to my recent OS update. I updated my OS to Catalina (V10.115).
 ```
 —xcode-select --install
 ```
-The second error happened when psycopg2, once of the dependencies, was being installed. I searched online and found the solution posted on the stack overflow worked. <https://stackoverflow.com/questions/39767810/cant-install-psycopg2-package-through-pip-install-is-this-because-of-sierra>
+The second error happened when psycopg2, once of the dependencies, was being installed. I searched online and found the [solution](https://stackoverflow.com/questions/39767810/cant-install-psycopg2-package-through-pip-install-is-this-because-of-sierra) posted on the stack overflow worked. 
 ```
 env LDFLAGS="-I/usr/local/opt/openssl/include -L/usr/local/opt/openssl/lib" pip install psycopg2
 ```
@@ -59,7 +59,7 @@ Then I opened a browser, typed the web address: http://localhost:8080, and then 
 ### Create a DAG
 DAG stands for Directed Acyclic Graph. It serves as a recipe to tell your system how to execute the tasks that are also defined in the DAG. The recipe needs to be written in python script. But Airflow provides a set of powerful operators for a wide range of tasks. For example, **bash operator** allows me to run a python script, **docker operator** allows me to run command in a container, and **python operator** allows me to call a python function. <br>
 <br>
-After all the tasks are defined with these operators, the tasks can be organized to be "cooked" in any order I like. Here is a example of DAG file from [Michał Karzyński's blog]<http://michal.karzynski.pl/blog/2017/03/19/developing-workflows-with-apache-airflow/>.
+After all the tasks are defined with these operators, the tasks can be organized to be "cooked" in any order I like. Here is a example of DAG file from [Michał Karzyński's blog](http://michal.karzynski.pl/blog/2017/03/19/developing-workflows-with-apache-airflow/).
 
 ```python
 from datetime import datetime
